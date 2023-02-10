@@ -3,6 +3,12 @@ package main
 import "fmt"
 
 
+
+func update(a *int) {
+ 	fmt.Println(a)
+	*a = *a + 10 
+}
+
 func main(){
 
 
@@ -21,6 +27,9 @@ func main(){
 	fmt.Println("x is ", x)
 	fmt.Println("y is ", y)
 	fmt.Println("y dereferencing value is ", *y)
+
+	update(&x)
+	fmt.Println(x)
 
 
 }
